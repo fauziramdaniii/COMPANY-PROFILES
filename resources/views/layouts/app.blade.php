@@ -8,14 +8,14 @@
     <title> @yield('title')
     </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin_template/images/favicon.png">
     <!-- Pignose Calender -->
-    <link href="/admin/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <link href="/admin_template/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
     <!-- Chartist -->
-    <link rel="stylesheet" href="/admin/plugins/chartist/css/chartist.min.css">
-    <link rel="stylesheet" href="/admin/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="/admin_template/plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="/admin_template/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
-    <link href="/admin/css/style.css" rel="stylesheet">
+    <link href="/admin_template/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -36,7 +36,7 @@
             <div class="brand-logo">
                 <a href="index.html">
                     {{-- <b class="logo-abbr"><img src="admin/images/logo.png" alt=""> </b> --}}
-                    <span class="logo-compact"><img src="/admin/images/logo-compact.png" alt=""></span>
+                    <span class="logo-compact"><img src="/admin_template/images/logo-compact.png" alt=""></span>
                     <span class="brand-title m-r-10 text-align-last: center" style="color: black">
                         {{ Auth::user()->email }}
                         {{-- <img src="admin/images/logo-text.png" alt=""> --}}
@@ -61,7 +61,7 @@
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Welcome {{ Auth::user()->name }}</li>
                     <li>
-                        <a href="/dashboard" aria-expanded="false">
+                        <a href="/admin/dashboard" aria-expanded="false">
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                     </li>
@@ -75,31 +75,31 @@
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Master</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="sliders">Master Sliders</a></li>
+                            <li><a href="/admin/sliders">Master Sliders</a></li>
                         </ul>
                         <ul aria-expanded="false">
-                            <li><a href="/portfolios">Master Portfolios</a></li>
+                            <li><a href="/admin/portfolios">Master Portfolios</a></li>
                         </ul>
                         <ul aria-expanded="false">
-                            <li><a href="/testimonials">Master Testimoni</a></li>
+                            <li><a href="/admin/testimonials">Master Testimoni</a></li>
                         </ul>
                         <ul aria-expanded="false">
-                            <li><a href="/services">Master Services</a></li>
+                            <li><a href="/admin/services">Master Services</a></li>
                         </ul>
                         <ul aria-expanded="false">
-                            <li><a href="/clients">Master Clients</a></li>
+                            <li><a href="/admin/clients">Master Clients</a></li>
                         </ul>
                         <ul aria-expanded="false">
-                            <li><a href="/teams">Master Team</a></li>
+                            <li><a href="/admin/teams">Master Team</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="/about" aria-expanded="false">
+                        <a href="/admin/about" aria-expanded="false">
                             <i class="icon-badge menu-icon"></i><span class="nav-text">About</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/contact" aria-expanded="false">
+                        <a href="/admin/contact" aria-expanded="false">
                             <i class="icon-note menu-icon"></i><span class="nav-text">Contact</span>
                         </a>
                     </li>
@@ -127,28 +127,28 @@
 
     </div>
 
-    <script src="/admin/plugins/common/common.min.js"></script>
-    <script src="/admin/js/custom.min.js"></script>
-    <script src="/admin/js/settings.js"></script>
-    <script src="/admin/js/gleek.js"></script>
-    <script src="/admin/js/styleSwitcher.js"></script>
+    <script src="/admin_template/plugins/common/common.min.js"></script>
+    <script src="/admin_template/js/custom.min.js"></script>
+    <script src="/admin_template/js/settings.js"></script>
+    <script src="/admin_template/js/gleek.js"></script>
+    <script src="/admin_template/js/styleSwitcher.js"></script>
 
     <!-- Chartjs -->
-    <script src="/admin/plugins/chart.js/Chart.bundle.min.js"></script>
+    <script src="/admin_template/plugins/chart.js/Chart.bundle.min.js"></script>
     <!-- Circle progress -->
-    <script src="/admin/plugins/circle-progress/circle-progress.min.js"></script>
+    <script src="/admin_template/plugins/circle-progress/circle-progress.min.js"></script>
     <!-- Datamap -->
-    <script src="/admin/plugins/d3v3/index.js"></script>
-    <script src="/admin/plugins/topojson/topojson.min.js"></script>
+    <script src="/admin_template/plugins/d3v3/index.js"></script>
+    <script src="/admin_template/plugins/topojson/topojson.min.js"></script>
     <!-- Morrisjs -->
-    <script src="/admin/plugins/raphael/raphael.min.js"></script>
-    <script src="/admin/plugins/morris/morris.min.js"></script>
+    <script src="/admin_template/plugins/raphael/raphael.min.js"></script>
+    <script src="/admin_template/plugins/morris/morris.min.js"></script>
     <!-- Pignose Calender -->
-    <script src="/admin/plugins/moment/moment.min.js"></script>
-    <script src="/admin/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <script src="/admin_template/plugins/moment/moment.min.js"></script>
+    <script src="/admin_template/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
     <!-- ChartistJS -->
-    <script src="/admin/plugins/chartist/js/chartist.min.js"></script>
-    <script src="/admin/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+    <script src="/admin_template/plugins/chartist/js/chartist.min.js"></script>
+    <script src="/admin_template/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

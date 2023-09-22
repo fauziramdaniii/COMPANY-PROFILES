@@ -47,7 +47,7 @@ class TeamController extends Controller
 
         Team::create($input);
 
-        return redirect('/teams')->with('message', 'Data Berhasil Di Tambahkan');
+        return redirect('/admin/teams')->with('message', 'Data Berhasil Di Tambahkan');
     }
 
     /**
@@ -89,7 +89,7 @@ class TeamController extends Controller
 
         $team->update($input);
 
-        return redirect('/teams')->with('message', 'Data Berhasil Di Edit');
+        return redirect('/admin/teams')->with('message', 'Data Berhasil Di Edit');
     }
 
     /**
@@ -99,6 +99,6 @@ class TeamController extends Controller
     {
         $team->delete();
 
-        return redirect('/teams')->with('message', 'Data Berhasil Di Hapus');
+        return redirect('/admin/teams')->with('message', 'Data Berhasil Di Hapus');
     }
 }

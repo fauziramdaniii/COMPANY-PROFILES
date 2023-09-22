@@ -23,7 +23,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credential)) {
             $request->session()->regenerate();
-            return redirect('/dashboard');
+            return redirect('/admin/dashboard');
         }
 
         return back()->withErrors([
@@ -35,6 +35,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect('/login');
+        return redirect('/admin/login');
     }
 }

@@ -47,7 +47,7 @@ class TestimonialController extends Controller
 
         Testimonial::create($input);
 
-        return redirect('/testimonials')->with('message', 'Data Berhasil Di Tambahkan');
+        return redirect('/admin/testimonials')->with('message', 'Data Berhasil Di Tambahkan');
     }
 
     /**
@@ -89,7 +89,7 @@ class TestimonialController extends Controller
 
         $testimonial->update($input);
 
-        return redirect('/testimonials')->with('message', 'Data Berhasil Di Edit');
+        return redirect('/admin/testimonials')->with('message', 'Data Berhasil Di Edit');
     }
 
     /**
@@ -99,6 +99,6 @@ class TestimonialController extends Controller
     {
         $testimonial->delete();
 
-        return redirect('/testimonials')->with('message', 'Data Berhasil Di Hapus');
+        return redirect('/admin/testimonials')->with('message', 'Data Berhasil Di Hapus');
     }
 }
