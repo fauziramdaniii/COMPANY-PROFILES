@@ -14,7 +14,7 @@ class PortfolioController extends Controller
     {
         $portfolios = Portfolio::all();
 
-        return view('portfolio.index', compact('portfolios'));
+        return view('admin.portfolio.index', compact('portfolios'));
     }
 
     /**
@@ -22,7 +22,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('portfolio.create');
+        return view('admin.portfolio.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class PortfolioController extends Controller
      */
     public function edit(Portfolio $portfolio)
     {
-        return view('portfolio.edit', compact('portfolio'));
+        return view('admin.portfolio.edit', compact('portfolio'));
     }
 
     /**

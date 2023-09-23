@@ -14,7 +14,7 @@ class ClientController extends Controller
     {
         $clients = Client::all();
 
-        return view('client.index', compact('clients'));
+        return view('admin.client.index', compact('clients'));
     }
 
     /**
@@ -22,7 +22,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('client.create');
+        return view('admin.client.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        return view('client.edit', compact('client'));
+        return view('admin.client.edit', compact('client'));
     }
 
     /**

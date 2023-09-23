@@ -14,7 +14,7 @@ class contactController extends Controller
     {
         $contact = Contact::first();
 
-        return view('contact', compact('contact'));
+        return view('admin.contact', compact('contact'));
     }
 
     /**

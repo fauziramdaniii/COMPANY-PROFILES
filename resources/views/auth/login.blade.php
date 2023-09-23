@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from inspirothemes.com/polo/page-user-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Sep 2020 10:26:55 GMT -->
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
-
-    <link href="template/css/plugins.css" rel="stylesheet">
-    <link href="template/css/style.css" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Skydash Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/template_admin/vendors/feather/feather.css">
+    <link rel="stylesheet" href="/template_admin/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/template_admin/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/template_admin/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="/template_admin/images/favicon.png" />
 </head>
 
 <body>
-
-    <div class="body-inner">
-
-        <section class="fullscreen" data-bg-parallax="/images/pages/1.jpg">
-            <div class="container">
-                <div>
-                    <div class="text-center m-b-20" style="overflow-y: hidden;">
-                        <a href="index.html" class="logo">
-                            <img src="template/images/logo-dark.png" alt="Polo Logo">
-                        </a>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-5 center p-50 background-white b-r-6" style="overflow-y: hidden;">
-                            <h3>Login to your Account</h3>
-                            @error('loginError')
-                                <div class="alert alert-danger">
-                                    <strong>Error</strong>
-                                    <p>{{ $message }}</p>
-                                </div>
-                            @enderror
-                            <form method="POST">
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth px-0">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                            <div class="brand-logo text-center">
+                                <img src="/template_admin/images/logo.svg" alt="logo">
+                            </div>
+                            <h4 class="text-center">Hello! let's get started</h4>
+                            <h6 class="text-center">Sign in to continue.</h6>
+                            <form class="pt-3" method="POST">
+                                @error('loginError')
+                                    <div class="alert alert-danger">
+                                        <strong>Error</strong>
+                                        <p>{{ $message }}</p>
+                                    </div>
+                                @enderror
                                 @csrf
                                 @error('email')
                                     <small style="color: red">
@@ -46,46 +45,54 @@
                                     </small>
                                 @enderror
                                 <div class="form-group">
-                                    <label class="sr-only">Username or Email</label>
-                                    <input type="text" class="form-control" placeholder="Username or Email"
-                                        name="email">
+                                    <input type="email" class="form-control form-control-lg" id="email"
+                                        name="email" placeholder="Email">
                                 </div>
                                 @error('password')
                                     <small style="color: red">
                                         {{ $message }}
                                     </small>
                                 @enderror
-                                <div class="form-group m-b-5">
-                                    <label class="sr-only">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" name="password">
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control form-control-lg" id="password"
+                                        name="password" placeholder="Password">
                                 </div>
-                                <div class="form-group form-inline text-left">
+                                <div class="mt-3">
+                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+                                        type="submit">SIGN IN</button>
+                                </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
                                     <div class="form-check">
-                                        <label>
-                                            <input type="checkbox"><small class="m-l-10"> Remember me</small>
+                                        <label class="form-check-label text-muted">
+                                            <input type="checkbox" class="form-check-input">
+                                            Keep me signed in
                                         </label>
                                     </div>
-                                </div>
-                                <div class="text-left form-group">
-                                    <button type="submit" class="btn">Login</button>
+                                    {{-- <a href="#" class="auth-link text-black">Forgot password?</a> --}}
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
     </div>
-
-
-    <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
-
-    <script src="template/js/jquery.js"></script>
-    <script src="template/js/plugins.js"></script>
-
-    <script src="template/js/functions.js"></script>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="/template_admin/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="/template_admin/js/off-canvas.js"></script>
+    <script src="/template_admin/js/hoverable-collapse.js"></script>
+    <script src="/template_admin/js/template.js"></script>
+    <script src="/template_admin/js/settings.js"></script>
+    <script src="/template_admin/js/todolist.js"></script>
+    <!-- endinject -->
 </body>
-
 
 </html>
