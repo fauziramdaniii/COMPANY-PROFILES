@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ClientController extends Controller
 {
@@ -47,6 +48,8 @@ class ClientController extends Controller
 
         Client::create($input);
 
+        Alert::success('Message', 'Data Berhasil Di Tambahkan');
+
         return redirect('/admin/clients')->with('message', 'Data Berhasil Di Tambahkan');
     }
 
@@ -89,6 +92,8 @@ class ClientController extends Controller
 
         $client->update($input);
 
+        Alert::success('Message', 'Data Berhasil Di Update');
+
         return redirect('/admin/clients')->with('message', 'Data Berhasil Di Edit');
     }
 
@@ -98,6 +103,8 @@ class ClientController extends Controller
     public function destroy(Client $client)
     {
         $client->delete();
+
+        Alert::success('Message', 'Data Berhasil Di Hapus');
 
         return redirect('/admin/clients')->with('message', 'Data Berhasil Di Hapus');
     }

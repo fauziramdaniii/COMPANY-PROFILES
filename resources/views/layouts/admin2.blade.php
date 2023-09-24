@@ -8,12 +8,11 @@
     <title>Skydash Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="/template_admin/vendors/feather/feather.css">
-    <link rel="stylesheet" href="/template_admin/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="/template_admin/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
+    <link rel="stylesheet" href="/template_admin/vendors/ti-icons/css/themify-icons.css">
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap.min.css"> --}}
+
     <link rel="stylesheet" href="/template_admin/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="/template_admin/images/favicon.png" />
@@ -406,6 +405,14 @@
     <script src="/template_admin/js/template.js"></script>
     <script src="/template_admin/js/settings.js"></script>
     <script src="/template_admin/js/todolist.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            new DataTable('#example');
+        })
+    </script> --}}
 </body>
 
 </html>

@@ -1,6 +1,8 @@
 @extends('layouts.admin2')
 
 @section('content')
+    @include('sweetalert::alert')
+
     <div class="container">
         <a href="/clients" class="btn btn-primary">Kembali</a>
         <div class="row">
