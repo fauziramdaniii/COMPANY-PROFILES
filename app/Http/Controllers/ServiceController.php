@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ServiceController extends Controller
 {
@@ -46,6 +47,8 @@ class ServiceController extends Controller
         }
 
         Service::create($input);
+
+        Alert::success('Message', 'Data Berhasil Di Tambahkan');
 
         return redirect('/admin/services')->with('message', 'Data Berhasil Di Tambahkan');
     }
@@ -90,6 +93,8 @@ class ServiceController extends Controller
 
         $service->update($input);
 
+        Alert::success('Message', 'Data Berhasil Di Edit');
+
         return redirect('/admin/services')->with('message', 'Data Berhasil Di Edit');
     }
 
@@ -99,6 +104,8 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
+
+        Alert::success('Message', 'Data Berhasil Di Hapus');
 
         return redirect('/admin/services')->with('message', 'Data Berhasil Di Hapus');
     }

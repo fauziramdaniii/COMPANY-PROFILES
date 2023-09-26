@@ -35,6 +35,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect('/admin/login');
+        return redirect('/login');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AboutController extends Controller
 {
@@ -70,6 +71,8 @@ class AboutController extends Controller
         $input = $request->all();
 
         $about->update($input);
+
+        Alert::success('Message', 'Data Berhasil Di Update');
 
         return redirect('/admin/about')->with('message', 'Data Berhasil Di Edit');
     }

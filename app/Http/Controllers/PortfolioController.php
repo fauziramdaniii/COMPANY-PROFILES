@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PortfolioController extends Controller
 {
@@ -46,6 +47,8 @@ class PortfolioController extends Controller
         }
 
         Portfolio::create($input);
+
+        Alert::success('Message', 'Data Berhasil Di Tambahkan');
 
         return redirect('/admin/portfolios')->with('message', 'Data Berhasil Di Tambahkan');
     }
@@ -90,6 +93,9 @@ class PortfolioController extends Controller
 
         $portfolio->update($input);
 
+        Alert::success('Message', 'Data Berhasil Di Edit');
+
+
         return redirect('/admin/portfolios')->with('message', 'Data Berhasil Di Edit');
     }
 
@@ -99,6 +105,7 @@ class PortfolioController extends Controller
     public function destroy(Portfolio $portfolio)
     {
         $portfolio->delete();
+        Alert::success('Message', 'Data Berhasil Di Hapus');
 
         return redirect('/admin/portfolios')->with('message', 'Data Berhasil Di Hapus');
     }

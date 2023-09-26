@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SliderController extends Controller
 {
@@ -47,6 +48,8 @@ class SliderController extends Controller
 
         Slider::create($input);
 
+        Alert::success('Message', 'Data Berhasil Di Tambahkan');
+
         return redirect('/admin/sliders')->with('message', 'Data Berhasil Di Tambahkan');
     }
 
@@ -89,6 +92,8 @@ class SliderController extends Controller
 
         $slider->update($input);
 
+        Alert::success('Message', 'Data Berhasil Di Edit');
+
         return redirect('/admin/sliders')->with('message', 'Data Berhasil Di Edit');
     }
 
@@ -98,6 +103,8 @@ class SliderController extends Controller
     public function destroy(Slider $slider)
     {
         $slider->delete();
+
+        Alert::success('Message', 'Data Berhasil Di Hapus');
 
         return redirect('/admin/sliders')->with('message', 'Data Berhasil Di Hapus');
     }

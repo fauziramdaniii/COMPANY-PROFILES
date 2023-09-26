@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Team;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TeamController extends Controller
 {
@@ -47,6 +48,8 @@ class TeamController extends Controller
 
         Team::create($input);
 
+        Alert::success('Message', 'Data Berhasil Di Tambahkan');
+
         return redirect('/admin/teams')->with('message', 'Data Berhasil Di Tambahkan');
     }
 
@@ -89,6 +92,8 @@ class TeamController extends Controller
 
         $team->update($input);
 
+        Alert::success('Message', 'Data Berhasil Di Edit');
+
         return redirect('/admin/teams')->with('message', 'Data Berhasil Di Edit');
     }
 
@@ -98,6 +103,8 @@ class TeamController extends Controller
     public function destroy(Team $team)
     {
         $team->delete();
+
+        Alert::success('Message', 'Data Berhasil Di Hapus');
 
         return redirect('/admin/teams')->with('message', 'Data Berhasil Di Hapus');
     }

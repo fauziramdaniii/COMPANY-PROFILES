@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class contactController extends Controller
 {
@@ -78,6 +79,8 @@ class contactController extends Controller
         }
 
         $contact->update($input);
+
+        Alert::success('Message', 'Data Berhasil Di Update');
 
         return redirect('/admin/contact')->with('message', 'Data Berhasil Di Edit');
     }

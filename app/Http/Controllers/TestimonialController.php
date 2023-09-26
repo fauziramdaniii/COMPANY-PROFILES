@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TestimonialController extends Controller
 {
@@ -47,6 +48,8 @@ class TestimonialController extends Controller
 
         Testimonial::create($input);
 
+        Alert::success('Message', 'Data Berhasil Di Tambahkan');
+
         return redirect('/admin/testimonials')->with('message', 'Data Berhasil Di Tambahkan');
     }
 
@@ -89,6 +92,8 @@ class TestimonialController extends Controller
 
         $testimonial->update($input);
 
+        Alert::success('Message', 'Data Berhasil Di Edit');
+
         return redirect('/admin/testimonials')->with('message', 'Data Berhasil Di Edit');
     }
 
@@ -98,6 +103,8 @@ class TestimonialController extends Controller
     public function destroy(Testimonial $testimonial)
     {
         $testimonial->delete();
+
+        Alert::success('Message', 'Data Berhasil Di Hapus');
 
         return redirect('/admin/testimonials')->with('message', 'Data Berhasil Di Hapus');
     }

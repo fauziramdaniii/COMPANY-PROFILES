@@ -2,34 +2,19 @@
 
 @section('section')
     <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-fade="true">
-
-        <div class="slide kenburns" data-bg-image="template/images/slider/notgeneric_bg3.jpg">
-            <div class="bg-overlay"></div>
-            <div class="container">
-                <div class="slide-captions text-center text-light">
-
-                    <h1>WELCOME TO THE WORLD OF POLO</h1>
-                    <p>Say hello to the smartest and most flexible bootstrap template. Polo is an powerful template
-                        that can build any type of websites, and quite possibly the only one you will ever need.</p>
-                    <div><a href="#welcome" class="btn scroll-to">Explore more</a></div>
-                    </span>
-
+        @foreach ($sliders as $slider)
+            <div class="slide kenburns" data-bg-image="/image/{{ $slider->image }}">
+                <div class="bg-overlay"></div>
+                <div class="container">
+                    <div class="slide-captions text-center text-light">
+                        <h1>{{ $slider->title }}</h1>
+                        <p>{{ $slider->description }}</p>
+                        <div><a href="#welcome" class="btn scroll-to">Explore more</a></div>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="slide" data-bg-video="video/pexels-waves.mp4">
-            <div class="bg-overlay"></div>
-            <div class="container">
-                <div class="slide-captions text-left text-light">
-
-                    <h1>220+ Laytout Demos</h1>
-                    <p class="text-small">POLO is packed with 220+ pre-made layouts that allow you to quickly
-                        jumpstart your project. Completely customizable for creating your own designs.</p>
-                    <div><a href="#welcome" class="btn scroll-to">Explore more</a></div>
-
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <section>

@@ -1,15 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.admin2')
+
 @section('content')
-    <div class="container">
-        @if ($message = Session::get('message'))
-            <div class="alert alert-success">
-                <h4 class="alert-heading">Well done!</h4>
-                <p>{{ $message }}</p>
-            </div>
-        @endif
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <form method="POST" action="/contact/{{ $contact->id }}" enctype="multipart/form-data">
+    @include('sweetalert::alert')
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Form Post Contact</h4>
+                <form method="POST" class="forms-sample" action="/admin/contact/{{ $contact->id }}"
+                    enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     @error('name')
@@ -63,8 +61,14 @@
                     @enderror
                     <img src="/image/{{ $contact->logo }}" alt="">
                     <div class="form-group">
-                        <label for="">Gambar</label>
-                        <input type="file" class="form-control" name="logo">
+                        <label>Gambar</label>
+                        <input type="file" name="logo" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                            <span class="input-group-append">
+                                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
